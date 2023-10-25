@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const futebol_controllers_1 = require("../controllers/futebol.controllers");
+const router = (0, express_1.Router)();
+router.post('/futebol', futebol_controllers_1.createFutebol);
+router.get('/futebol', futebol_controllers_1.getFutebol);
+router.get('/futebol/:id', futebol_controllers_1.getFutebolID);
+router.put('/futebol/:id', futebol_controllers_1.putFutebol);
+router.delete('/futebol/:id', futebol_controllers_1.deleteFutebol);
+exports.default = router;
